@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-//video @ 21:45
+import TodoItems from "./TodoItems";
+import "./TodoList.css";
+
 class TodoList extends Component{
   constructor(props){
     super(props);
@@ -40,9 +42,10 @@ class TodoList extends Component{
           <form onSubmit={this.addItem}>
             <input ref={(a) => this._inputElement = a} placeholder="Enter task">
             </input>
-            <button type="submit"><b>add task</b></button>
+            <button type="submit">add task</button>
             </form>
           </div>
+          <TodoItems entries= {this.state.items}/>
       </div>
     );
   }
