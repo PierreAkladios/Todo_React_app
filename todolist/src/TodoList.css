@@ -1,5 +1,5 @@
 /*inputbox*/
-.TodoListMain .header input{
+.todoListMain .header input{
   padding: 10px;
   font-size: 16px;
   border: 2px solid #FFF;
@@ -7,7 +7,7 @@
 }
 
 /*button*/
-.TodoListMain .header button {
+.todoListMain .header button {
   padding: 10px;
   font-size: 16px;
   margin: 10px;
@@ -32,6 +32,13 @@
   margin-bottom: 15px;
   border-radius: 5px;
   list-style: none;
+  /*animation for when an item is removed*/
+  transition: background-color .2s ease-out;
+}
+
+.todoListMain .theList li:hover {
+  background-color: pink;
+  cursor: pointer;
 }
 
 ul.theList {

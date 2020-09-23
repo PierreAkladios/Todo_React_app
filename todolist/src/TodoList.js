@@ -11,6 +11,7 @@ class TodoList extends Component{
     };
     //binding the value
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
   addItem(e){
     //checking that the item is not empty
@@ -33,10 +34,23 @@ class TodoList extends Component{
     //overiding the default behaviour of the from which refreches automaticly
     e.preventDefault();
   }
+  //use console.log() to debug the errors
+
+  //method to handle all the delete functionalities to keep the state up to Date
+  deleteItem(key){
+    //filter method to remove any item that happens to match the current key
+    var filteredItems = this.state.items.filter(function (item) {
+      return (item.key !== key);
+    });
+
+    this.setState({
+      items: filteredItems
+    });
+  }
   render(){
     //place to enter information
     return (
-      <div className="TodoListMain">
+      <div className="todoListMain">
         <div className="header">
 
           <form onSubmit={this.addItem}>
@@ -45,7 +59,8 @@ class TodoList extends Component{
             <button type="submit">add task</button>
             </form>
           </div>
-          <TodoItems entries= {this.state.items}/>
+          <TodoItems entries= {this.state.items}
+                     delete={this.deleteItem}/>
       </div>
     );
   }
