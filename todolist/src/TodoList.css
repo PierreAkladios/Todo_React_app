@@ -12,15 +12,15 @@
   font-size: 16px;
   margin: 10px;
   margin-right: 0px;
-  background-color: #0066FF;
+  background-color: #7ca37d;
   color: #FFF;
-  border: 2px solid #0066FF;
+  border: 2px solid #7ca37d;
 }
 
 /*change color when you hover on it*/
 .todoListMain .header button:hover {
-  background-color: #003399;
-  border: 2px solid #003399;
+  background-color:#526e53;
+  border: 2px solid #526e53;
   cursor: pointer; /*shape of pointer*/
 }
 
@@ -37,7 +37,7 @@
 }
 
 .todoListMain .theList li:hover {
-  background-color: pink;
+  background-color: #bad4b8;
   cursor: pointer;
 }
 
